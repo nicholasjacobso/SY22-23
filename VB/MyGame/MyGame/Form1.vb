@@ -53,7 +53,9 @@
                 moveto(Player, Speed, 0)
             Case Keys.Space
                 'Add a bullet in the direction the player is facing
-                AddAt(BulletPictureBox2, Player.Location, direction)
+                Dim r As New Random
+
+                AddAt(BulletPictureBox2, New Point(r.Next(50, 500), r.Next(50, 500)), "FOLLOW")
         End Select
     End Sub
 
@@ -61,7 +63,7 @@
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         '   AddAt(BulletPictureBox2, New Point(0, 0), "CHASE")
         'AddAt(BulletPictureBox2, New Point(10, 5), "FOLLOW")
-        AddAt(BulletPictureBox2, New Point(5, 15), "RANDOM")
+        AddAt(BulletPictureBox2, New Point(0, 0), "CHASE")
     End Sub
 
 
@@ -70,4 +72,31 @@
         UpdateGame()
     End Sub
 
+    Private Sub Player_Click(sender As Object, e As EventArgs) Handles Player.Click
+
+    End Sub
+
+    Private Sub WallPictureBox4_Click(sender As Object, e As EventArgs) Handles WallPictureBox4.Click
+
+    End Sub
+
+    Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles wallPictureBox12.Click
+
+    End Sub
+
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles wallPictureBox10.Click
+
+    End Sub
+
+    Private Sub wallPictureBox1_Click(sender As Object, e As EventArgs) Handles wallPictureBox1.Click
+
+    End Sub
+
+    Private Sub Target_Click(sender As Object, e As EventArgs) Handles Target.Click
+
+    End Sub
+
+    Private Sub BulletPictureBox2_Click(sender As Object, e As EventArgs) Handles BulletPictureBox2.Click
+
+    End Sub
 End Class
